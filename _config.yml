@@ -1,7 +1,6 @@
 title: phoolish philomath
 description: >
   Do I need a description?
-baseurl: "/phoolish-philomath"
 url: "www.phoolish-philomath.com"
 paginate:	2 # The number of posts to show per page on your homepage
 name: "Phoolish Philomath"
