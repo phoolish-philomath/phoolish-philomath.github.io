@@ -1,6 +1,4 @@
 title: phoolish philomath
-description: >
-  Do I need a description?
 paginate:	2 # The number of posts to show per page on your homepage
 name: "Phoolish Philomath"
 markdown: kramdown
