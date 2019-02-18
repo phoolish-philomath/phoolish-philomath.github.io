@@ -4,17 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac augue libero.
-Fusce ac tempor dolor. Ut est dui, gravida a consequat aliquet, fermentum
-sodales risus. Suspendisse eu arcu id mi ornare facilisis non id nisl. Maecenas
-nec congue arcu, non semper neque. Proin mollis nisl diam, eu ultrices diam
-facilisis et. Integer fringilla lorem quis semper venenatis.
-
-Aliquam vestibulum purus enim. Sed rhoncus interdum erat id consequat. Nulla
-cursus venenatis massa, quis convallis lacus condimentum vel. Etiam mollis,
-orci ac pharetra commodo, diam lectus hendrerit eros, ac elementum magna augue
-sed tellus. Maecenas molestie, nisi ut sodales scelerisque, purus neque
-imperdiet dui, mollis elementum sem augue vel ipsum. Nulla lacinia arcu at quam
-lobortis, vitae interdum tellus fermentum. Cum sociis natoque penatibus et
-magnis dis parturient montes, nascetur ridiculus mus. Fusce sodales semper erat, eu fringilla ligula vulputate id. Maecenas quis libero pellentesque lacus
-egestas vehicula sit amet et neque. Nulla nec facilisis sem. Pellentesque rutrum elementum molestie.
+This is a space intended to document the never-ending learning process that is existing and having some interests. I work in the tech industry, I have a degree in math and a strong interest in language and history, and I enjoy all the things that most people enjoy like food, books and music. Far from being a polymath, I make the much weaker assertion that I am simply a ***philomath***, a lover of learning. I foolishly dream of the day I can call myself an expert in all the things I love to learn about, but to dull the blow of uncomfortable self-deprecation, I will call it ***phoolish***ness instead of foolishness. پھول (*p<sup>h</sup>ool*) means *flower* in my mothertongue, Urdu, and some other things I really love include floral patterns, bad puns and my heritage. 
