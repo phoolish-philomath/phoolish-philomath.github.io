@@ -4,4 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is a space intended to document the never-ending learning process that is existing and having some interests. I work in the tech industry, I have a degree in math and a strong interest in language and history, and I enjoy all the things that most people enjoy like food, books and music. Far from being a polymath, I make the much weaker assertion that I am simply a ***philomath***, a lover of learning. I foolishly dream of the day I can call myself an expert in all the things I love to learn about, but to dull the blow of uncomfortable self-deprecation, I will call it ***phoolish***ness instead of foolishness. پھول (*p<sup>h</sup>ool*) means *flower* in my mothertongue, Urdu, and some other things I really love include floral patterns, bad puns and my heritage. 
+This is a space intended to document things I love, things I learn and everything in between. I work in tech, have interests in politics and language, and I enjoy food, books and music like most people. I would not classify myself as an expert in everything I love to learn about so instead of being a polymath, I make the much weaker assertion that I am just a ***philomath***, a lover of learning. I foolishly dream of the day I can call myself an expert in all the things I love, but to dull the blow of uncomfortable self-deprecation, I will call it ***phoolish***ness instead of foolishness. پھول (*p<sup>h</sup>ool*) {% sidenote side1 The 'h' over the letter 'p' follows the IPA standard for [aspirated consonants](https://en.wikipedia.org/wiki/Aspirated_consonant). It means the 'p' is pronounced with a puff of air. %} means *flower* in my mothertongue, Urdu, and some other things I really love include floral patterns, bad puns and my heritage.
+
+
+## Credits
+This blog uses the [Immaculate theme](https://www.github.com/siawyoung/immaculate) by Law Siaw Young.
