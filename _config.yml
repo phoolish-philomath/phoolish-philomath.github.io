@@ -4,6 +4,7 @@ name: "Phoolish Philomath"
 markdown: kramdown
 mathjax: true
 permalink: none
+excerpt_separator: <!--more-->
 kramdown:
   parse_block_html: true
 gems:

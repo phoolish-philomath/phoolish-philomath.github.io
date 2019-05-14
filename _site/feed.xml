@@ -4,19 +4,36 @@
     <title>Phoolish Philomath - Articles</title>
     <description></description>
     <link>
-    </link>
+    http://localhost:4000</link>
     
       
       <item>
-        <title>A Real Post? Not Really.</title>
+        <title>Learning New Things: Public Resources for Devs &amp; Data Scientists</title>
+        
+          <description>&lt;p&gt;I decided to compile a collection of useful resources I have discovered over the past year that helped me become a better software developer and data scientist. While a quick copy-and-paste of your error message into Google usually fixes bugs as you come across them, sometimes you need more targeted resources when you’re learning new things. A search engine is not a great teacher- it spits out a lot of content and often you end up doing more searching than finding. The volume of information can be so overwhelming that I never feel like I have the best possible resource for me and I keep jumping from blog post to blog post, searching for something better. Before I wander too far into material more suitable for a another blog post on choice overload and hyperconsumerism, I will return to just cataloguing public and mostly free resources for those in the tech industry and those aspiring to be part of it.&lt;/p&gt;
+
+&lt;p&gt;High-status knowledge such as computer science can be more difficult for some to access than others. Most of the resources I have listed below are public and open to all but they were particularly useful for myself, someone who was already literate in programming and data science, and someone who prefers reading over watching or listening for self-teaching. However, I am sure the spirit of many of these ideas can be transferred to learning all kinds of subjects, for people of all abilities, preferences and levels of experience.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/cs/general/public-learning-resources.html</link>
+        <guid isPermaLink="true">http://localhost:4000/cs/general/public-learning-resources.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Real Post? Not Really. Just A Test.</title>
         
           <description>&lt;p&gt;The myth of the camel is closely intertwined with the myth of the gas. Indeed, they are offspring borne of the ardent rejection of the censorship surrounding the study of Gavinian anthropology. It is a rebellion and a celebration, a threat and an embrace, a myth but not a legend. Researchers in the field must strive to preserve this history, one that is constantly under threat by the outbreak and rapid spread of a new disease, known to sufferers as &lt;em&gt;maturity&lt;/em&gt;. One may only hope that scientists can find a cure for this gruesome affliction, but till then, we shall continue to fight at the battlefront, so future generations can one day also reminisce about camel myth.&lt;/p&gt;
 </description>
         
         <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
         <link>
-        /first-post.html</link>
-        <guid isPermaLink="true">/first-post.html</guid>
+        http://localhost:4000/first-post.html</link>
+        <guid isPermaLink="true">http://localhost:4000/first-post.html</guid>
       </item>
       
     
