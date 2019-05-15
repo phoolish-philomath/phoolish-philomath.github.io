@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "Learning New Things: Public Resources for Devs & Data Scientists"
-categories: [cs, general]
+title: "Learning New Things As A Developer"
 tags: [public, free, cs, math, ml, data science, libraries, education, learning]
 ---
 
