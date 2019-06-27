@@ -8,7 +8,39 @@
     
       
       <item>
-        <title>Learning New Things: Public Resources for Devs &amp; Data Scientists</title>
+        <title>Asynchronous Task Scheduling in Python</title>
+        
+          <description>&lt;p&gt;In this post, I am sharing a simple Python pattern I like to use to schedule non-blocking tasks that run periodically.&lt;/p&gt;
+
+&lt;p&gt;Python 3.7 makes asynchronous programming in Python a bit smoother and more accessible than previous releases. In particular, I like using Tasks, which are a subclass of Futures (which are themselves analogous to Promises in Javascript). In most cases, you do not need to use Futures but can instead just work with coroutines and Tasks through a higher-level API.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 26 Jun 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/asynchronous-task-scheduling-in-python.html</link>
+        <guid isPermaLink="true">http://localhost:4000/asynchronous-task-scheduling-in-python.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Time Machines Are A Code Smell</title>
+        
+          <description>&lt;p&gt;I recently read an article called &lt;a href=&quot;https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a&quot;&gt;“Mocking is a code smell”&lt;/a&gt; that reminded me of a unit test I wrote when I first started writing tests properly. The premise of the article is that the need for mocks in your unit tests could be indicative of a problem with your code. As unappetizing as the phrase “code smell” is, it did make me think more explcitly about the relationship between testing and design. Ever since I started following a test-driven development approach, the quality of my code has definitely improved and my understanding of good design has deepened.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Jun 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/time-machines-are-a-code-smell.html</link>
+        <guid isPermaLink="true">http://localhost:4000/time-machines-are-a-code-smell.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Learning New Things As A Developer</title>
         
           <description>&lt;p&gt;I decided to compile a collection of useful resources I have discovered over the past year that helped me become a better software developer and data scientist. While a quick copy-and-paste of your error message into Google usually fixes bugs as you come across them, sometimes you need more targeted resources when you’re learning new things. A search engine is not a great teacher- it spits out a lot of content and often you end up doing more searching than finding. The volume of information can be so overwhelming that I never feel like I have the best possible resource for me and I keep jumping from blog post to blog post, searching for something better. Before I wander too far into material more suitable for a another blog post on choice overload and hyperconsumerism, I will return to just cataloguing public and mostly free resources for those in the tech industry and those aspiring to be part of it.&lt;/p&gt;
 
@@ -18,8 +50,8 @@
         
         <pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
         <link>
-        http://localhost:4000/cs/general/public-learning-resources.html</link>
-        <guid isPermaLink="true">http://localhost:4000/cs/general/public-learning-resources.html</guid>
+        http://localhost:4000/learning-new-things-as-developer.html</link>
+        <guid isPermaLink="true">http://localhost:4000/learning-new-things-as-developer.html</guid>
       </item>
       
     

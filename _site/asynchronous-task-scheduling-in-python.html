@@ -7,10 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="">
+  <title>Asynchronous Task Scheduling in Python</title>
+  <meta name="description" content="In this post, I am sharing a simple Python pattern I like to use to schedule non-blocking tasks that run periodically.Python 3.7 makes asynchronous programmi...">
 
-  <link rel="canonical" href="http://localhost:4000/about/">
+  <link rel="canonical" href="http://localhost:4000/asynchronous-task-scheduling-in-python.html">
   <link rel="alternate" type="application/rss+xml" title="phoolish philomath" href="http://localhost:4000/feed.xml">
 
   <script type="application/ld+json">
@@ -18,11 +18,11 @@
 {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4000/about/",
-  "headline": "About",
-  "datePublished": "2019-06-27T02:34:28-04:00",
-  "dateModified": "2019-06-27T02:34:28-04:00",
-  "description": "",
+  "mainEntityOfPage": "http://localhost:4000/asynchronous-task-scheduling-in-python.html",
+  "headline": "Asynchronous Task Scheduling in Python",
+  "datePublished": "2019-06-26T00:00:00-04:00",
+  "dateModified": "2019-06-26T00:00:00-04:00",
+  "description": "In this post, I am sharing a simple Python pattern I like to use to schedule non-blocking tasks that run periodically.Python 3.7 makes asynchronous programmi...",
   "author": {
     "@type": "Person",
     "name": "Phoolish Philomath"
@@ -447,26 +447,117 @@ code {
 </header>
 
 
-    <article class="post">
+    <article>
+
+  <h2 itemprop="name"><a href="" itemprop="url">Asynchronous Task Scheduling in Python</a></h2>
 
   <div class="post-meta">
-    <h1 class="post-title">About</h1>
+    <time datetime="26 June 2019">26 June 2019</time>
   </div>
 
   <section>
-    <p>This is a space intended to document things I love, things I learn and everything in between. I work in tech, am interested in politics and language, and I enjoy food, books and music like most people. I would not classify myself as an expert in everything I love to learn about so instead of being a polymath, I make the much weaker assertion that I am just a <strong><em>philomath</em></strong>, a lover of learning. I foolishly dream of the day I can call myself an expert in all the things I love, but to dull the blow of uncomfortable self-deprecation, I will call it <strong><em>phoolish</em></strong>ness instead of foolishness. پھول (<em>p<sup>h</sup>ool</em>) means <em>flower</em> in my mothertongue, Urdu, and some other things I really love include floral patterns, bad puns and my heritage.</p>
+    <p>In this post, I am sharing a simple Python pattern I like to use to schedule non-blocking tasks that run periodically.</p>
 
-<h2 id="credits">Credits</h2>
-<p>This blog uses the <a href="https://www.github.com/siawyoung/immaculate">Immaculate theme</a> by Law Siaw Young.</p>
+<p>Python 3.7 makes asynchronous programming in Python a bit smoother and more accessible than previous releases. In particular, I like using Tasks, which are a subclass of Futures (which are themselves analogous to Promises in Javascript). In most cases, you do not need to use Futures but can instead just work with coroutines and Tasks through a higher-level API.
+<!--more--></p>
+
+<p>Tasks are coroutine schedulers. Coroutines are subroutines except they allow execution to be suspended and then resumed. You can wrap a coroutine in a Task and it will schedule it for execution as soon as possible. We will use Tasks and coroutines to run something in the background periodically, inspired by the <code class="highlighter-rouge">setInterval</code> method in Javascript.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">asyncio</span>
+    
+<span class="k">async</span> <span class="k">def</span> <span class="nf">run_periodically</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="s">"""
+    Helper for schedule_task_periodically.
+    Wraps a function in a coroutine that will run the
+    given function indefinitely
+    :param wait_time: seconds to wait between iterations of func
+    :param func: the function that will be run
+    :param args: any args that need to be provided to func
+    """</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">wait_time</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">schedule_task_periodically</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="s">"""
+    Schedule a function to run periodically as an asyncio.Task
+    :param wait_time: interval (in seconds)
+    :param func: the function that will be run
+    :param args: any args needed to be provided to func
+    :return: an asyncio Task that has been scheduled to run
+    """</span>
+    <span class="k">return</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">run_periodically</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>We can use this method to gracefully cancel a periodic background task we scheduled this way:</p>
+
+<p><span class="marginnote">On cancellation, we wait for the Task to finish. Tasks throw a <a href="https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancel">CancelledError</a> exception when cancelled which needs to be caught.</span></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">async</span> <span class="k">def</span> <span class="nf">cancel_scheduled_task</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+    <span class="s">"""
+    Gracefully cancels a task
+    :type task: asyncio.Task
+    """</span>
+    <span class="n">task</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">task</span>
+    <span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">CancelledError</span><span class="p">:</span>
+        <span class="k">pass</span>
+</code></pre></div></div>
+
+<p>Here is an example of this implementation in action:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">def</span> <span class="nf">count_seconds_since</span><span class="p">(</span><span class="n">then</span><span class="p">):</span>
+    <span class="s">"""
+    Prints the number of seconds that have passed since then
+    :type then: datetime.datetime
+    :param then: Time to count seconds from
+    """</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"{(now - timestamp).seconds} seconds have passed."</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="n">counter_task</span> <span class="o">=</span> <span class="n">schedule_task_periodically</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">count_seconds_since</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">"Doing something.."</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Doing someting else.."</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Shutting down now..."</span><span class="p">)</span>
+
+    <span class="k">await</span> <span class="n">cancel_scheduled_task</span><span class="p">(</span><span class="n">counter_task</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Done"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+
+</code></pre></div></div>
+
+<p>This outputs:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Doing something..
+0 seconds have passed.
+3 seconds have passed.
+6 seconds have passed.
+9 seconds have passed.
+Doing someting else..
+12 seconds have passed.
+Shutting down now...
+Done
+</code></pre></div></div>
 
   </section>
 
-</article>
-
-<footer class="site-footer">
+    <footer class="site-footer">
    <section class="copyright">All content copyright <a href="mailto:">Phoolish Philomath</a> &copy; 2019 &bull; All rights reserved.</section>
 </footer>
 
+
+  </div>
+</article>
 
   </body>
 </html>

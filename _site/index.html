@@ -20,8 +20,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "http://localhost:4000/",
   "headline": "phoolish philomath",
-  "datePublished": "2019-05-14T15:45:55-04:00",
-  "dateModified": "2019-05-14T15:45:55-04:00",
+  "datePublished": "2019-06-27T02:34:28-04:00",
+  "dateModified": "2019-06-27T02:34:28-04:00",
   "description": "",
   "author": {
     "@type": "Person",
@@ -441,6 +441,8 @@ code {
     
       
     
+      
+    
   </div>
 </header>
 
@@ -457,17 +459,17 @@ code {
       <article itemscope itemtype="http://schema.org/BlogPosting" role="article">
 
           <header>
-            <h2 itemprop="name"><a href="/cs/general/public-learning-resources.html" itemprop="url">Learning New Things: Public Resources for Devs & Data Scientists</a></h2>
+            <h2 itemprop="name"><a href="/asynchronous-task-scheduling-in-python.html" itemprop="url">Asynchronous Task Scheduling in Python</a></h2>
           </header>
 
           <div class="post-meta">
-            <time datetime="14 May 2019">14 May 2019</time>
+            <time datetime="26 June 2019">26 June 2019</time>
           </div>
 
           <section itemprop="description">
-            <p>I decided to compile a collection of useful resources I have discovered over the past year that helped me become a better software developer and data scientist. While a quick copy-and-paste of your error message into Google usually fixes bugs as you come across them, sometimes you need more targeted resources when you’re learning new things. A search engine is not a great teacher- it spits out a lot of content and often you end up doing more searching than finding. The volume of information can be so overwhelming that I never feel like I have the best possible resource for me and I keep jumping from blog post to blog post, searching for something better. Before I wander too far into material more suitable for a another blog post on choice overload and hyperconsumerism, I will return to just cataloguing public and mostly free resources for those in the tech industry and those aspiring to be part of it.</p>
+            <p>In this post, I am sharing a simple Python pattern I like to use to schedule non-blocking tasks that run periodically.</p>
 
-<p>High-status knowledge such as computer science can be more difficult for some to access than others. Most of the resources I have listed below are public and open to all but they were particularly useful for myself, someone who was already literate in programming and data science, and someone who prefers reading over watching or listening for self-teaching. However, I am sure the spirit of many of these ideas can be transferred to learning all kinds of subjects, for people of all abilities, preferences and levels of experience.</p>
+<p>Python 3.7 makes asynchronous programming in Python a bit smoother and more accessible than previous releases. In particular, I like using Tasks, which are a subclass of Futures (which are themselves analogous to Promises in Javascript). In most cases, you do not need to use Futures but can instead just work with coroutines and Tasks through a higher-level API.</p>
 
 
           </section>
@@ -477,15 +479,16 @@ code {
       <article itemscope itemtype="http://schema.org/BlogPosting" role="article">
 
           <header>
-            <h2 itemprop="name"><a href="/first-post.html" itemprop="url">A Real Post? Not Really. Just A Test.</a></h2>
+            <h2 itemprop="name"><a href="/time-machines-are-a-code-smell.html" itemprop="url">Time Machines Are A Code Smell</a></h2>
           </header>
 
           <div class="post-meta">
-            <time datetime="16 February 2019">16 February 2019</time>
+            <time datetime="25 June 2019">25 June 2019</time>
           </div>
 
           <section itemprop="description">
-            <p>The myth of the camel is closely intertwined with the myth of the gas. Indeed, they are offspring borne of the ardent rejection of the censorship surrounding the study of Gavinian anthropology. It is a rebellion and a celebration, a threat and an embrace, a myth but not a legend. Researchers in the field must strive to preserve this history, one that is constantly under threat by the outbreak and rapid spread of a new disease, known to sufferers as <em>maturity</em>. One may only hope that scientists can find a cure for this gruesome affliction, but till then, we shall continue to fight at the battlefront, so future generations can one day also reminisce about camel myth.</p>
+            <p>I recently read an article called <a href="https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a">“Mocking is a code smell”</a> that reminded me of a unit test I wrote when I first started writing tests properly. The premise of the article is that the need for mocks in your unit tests could be indicative of a problem with your code. As unappetizing as the phrase “code smell” is, it did make me think more explcitly about the relationship between testing and design. Ever since I started following a test-driven development approach, the quality of my code has definitely improved and my understanding of good design has deepened.</p>
+
 
           </section>
 
@@ -494,6 +497,26 @@ code {
   </div>
 
   <nav role="navigation">
+    
+    <div class="pagination">
+      
+        <span>&laquo;</span>
+      
+
+      
+        
+          <em>1</em>
+        
+      
+        
+          <a href="/page2">2</a>
+        
+      
+
+      
+        <a href="/page2">Next &raquo;</a>
+      
+    </div>
     
   </nav>
 
