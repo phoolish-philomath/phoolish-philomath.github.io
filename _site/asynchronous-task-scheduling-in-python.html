@@ -10,15 +10,15 @@
   <title>Asynchronous Task Scheduling in Python</title>
   <meta name="description" content="In this post, I am sharing a simple Python pattern I like to use to schedule non-blocking tasks that run periodically.Python 3.7 makes asynchronous programmi...">
 
-  <link rel="canonical" href="http://localhost:4000/asynchronous-task-scheduling-in-python.html">
-  <link rel="alternate" type="application/rss+xml" title="phoolish philomath" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="/asynchronous-task-scheduling-in-python.html">
+  <link rel="alternate" type="application/rss+xml" title="phoolish philomath" href="/feed.xml">
 
   <script type="application/ld+json">
   
 {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4000/asynchronous-task-scheduling-in-python.html",
+  "mainEntityOfPage": "/asynchronous-task-scheduling-in-python.html",
   "headline": "Asynchronous Task Scheduling in Python",
   "datePublished": "2019-06-26T00:00:00-04:00",
   "dateModified": "2019-06-26T00:00:00-04:00",
@@ -32,14 +32,14 @@
     "name": "phoolish philomath",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:4000",
+      "url": "",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http://localhost:4000",
+    "url": "",
     "height": 60,
     "width": 60
   }
@@ -491,7 +491,6 @@ code {
 
 <p>We can use this method to gracefully cancel a periodic background task we scheduled this way:</p>
 
-<p><span class="marginnote">On cancellation, we wait for the Task to finish. Tasks throw a <a href="https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancel">CancelledError</a> exception when cancelled which needs to be caught.</span></p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">async</span> <span class="k">def</span> <span class="nf">cancel_scheduled_task</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
     <span class="s">"""
     Gracefully cancels a task
@@ -503,6 +502,7 @@ code {
     <span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">CancelledError</span><span class="p">:</span>
         <span class="k">pass</span>
 </code></pre></div></div>
+<p>Note that on cancellation, we wait for the Task to finish. Tasks throw a <a href="https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancel">CancelledError</a> exception when cancelled which needs to be caught.</p>
 
 <p>Here is an example of this implementation in action:</p>
 
@@ -524,7 +524,7 @@ code {
 
     <span class="k">print</span><span class="p">(</span><span class="s">"Doing something.."</span><span class="p">)</span>
     <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Doing someting else.."</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Doing something else.."</span><span class="p">)</span>
     <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"Shutting down now..."</span><span class="p">)</span>
 
@@ -543,7 +543,7 @@ code {
 3 seconds have passed.
 6 seconds have passed.
 9 seconds have passed.
-Doing someting else..
+Doing something else..
 12 seconds have passed.
 Shutting down now...
 Done

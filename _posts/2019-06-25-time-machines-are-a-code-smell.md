@@ -4,7 +4,7 @@ title: "Time Machines Are A Code Smell"
 tags: [testing, tdd, software development, software design, cs]
 ---
 
-I recently read an article called ["Mocking is a code smell"](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) that reminded me of a unit test I wrote when I first started writing tests properly. The premise of the article is that the need for mocks in your unit tests could be indicative of a problem with your code. As unappetizing as the phrase "code smell" is, it did make me think more explcitly about the relationship between testing and design. Ever since I started following a test-driven development approach, the quality of my code has definitely improved and my understanding of good design has deepened.
+I recently read an article called ["Mocking is a code smell"](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a) that reminded me of a unit test I wrote when I first started writing tests properly. The premise of the article is that the need for mocks in your unit tests could be indicative of a problem with your code. As unappetizing as the phrase "code smell" is, it did make me think more explicitly about the relationship between testing and design. Ever since I started following a test-driven development approach, the quality of my code has definitely improved and my understanding of good design has deepened.
 
 <!--more-->
 

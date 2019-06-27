@@ -42,9 +42,6 @@ def schedule_task_periodically(wait_time, func, *args):
 
 We can use this method to gracefully cancel a periodic background task we scheduled this way:
 
-{% marginnote 2 %}
-On cancellation, we wait for the Task to finish. Tasks throw a [CancelledError](https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancel) exception when cancelled which needs to be caught.
-{% endmarginnote %}
 ```python
 async def cancel_scheduled_task(task):
     """
@@ -57,6 +54,7 @@ async def cancel_scheduled_task(task):
     except asyncio.CancelledError:
         pass
 ``` 
+Note that on cancellation, we wait for the Task to finish. Tasks throw a [CancelledError](https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancel) exception when cancelled which needs to be caught.
 
 Here is an example of this implementation in action:
 
@@ -79,7 +77,7 @@ async def main():
 
     print("Doing something..")
     await asyncio.sleep(10)
-    print("Doing someting else..")
+    print("Doing something else..")
     await asyncio.sleep(5)
     print("Shutting down now...")
 
@@ -99,7 +97,7 @@ Doing something..
 3 seconds have passed.
 6 seconds have passed.
 9 seconds have passed.
-Doing someting else..
+Doing something else..
 12 seconds have passed.
 Shutting down now...
 Done
