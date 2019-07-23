@@ -3,7 +3,7 @@ layout: page
 title: Book Tracker
 permalink: /book-tracker/
 ---
-<p>I made some changes.</p>
+<p>I made some more changes to url in config.</p>
 <table class='book-tracker'>
 <tr>
 <td>
