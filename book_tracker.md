@@ -60,10 +60,10 @@ permalink: /book-tracker/
 <td>
 <div class="container">
 <div class="read" style="--proportion: 10%">
-<img src="/assets/images/dispossessed.jpeg"  >
+<img src="/assets/images/dispossessed.jpg"  >
 </div>
 <div class="unread">
-<img src="/assets/images/dispossessed.jpeg"  >
+<img src="/assets/images/dispossessed.jpg"  >
 </div>
 </div>
 </td>
