@@ -47,3 +47,26 @@ code {
 /*
 Phoolish styles starts here
 */
+
+
+table.book-tracker {
+border-collapse: separate;
+border-spacing: 30px;
+}
+table.book-tracker td {vertical-align:centre}
+
+.container {
+width: 200px;
+position:relative;
+}
+
+.read img {
+    width: 200px;
+    position: absolute;
+    clip-path: polygon(0 calc(100% - var(--proportion)), 100% calc(100% - var(--proportion)), 100% 100%, 0 100%);
+}
+
+.unread img{
+    width: 200px;
+    filter: opacity(15%) saturate(5%);
+}
