@@ -10,18 +10,18 @@
   <title>phoolish philomath</title>
   <meta name="description" content="">
 
-  <link rel="canonical" href="/page2/">
-  <link rel="alternate" type="application/rss+xml" title="phoolish philomath" href="/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/page2/">
+  <link rel="alternate" type="application/rss+xml" title="phoolish philomath" href="http://localhost:4000/feed.xml">
 
   <script type="application/ld+json">
   
 {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "/page2/",
+  "mainEntityOfPage": "http://localhost:4000/page2/",
   "headline": "phoolish philomath",
-  "datePublished": "2019-06-27T02:45:17-04:00",
-  "dateModified": "2019-06-27T02:45:17-04:00",
+  "datePublished": "2019-07-23T14:02:51-04:00",
+  "dateModified": "2019-07-23T14:02:51-04:00",
   "description": "",
   "author": {
     "@type": "Person",
@@ -32,14 +32,14 @@
     "name": "phoolish philomath",
     "logo": {
       "@type": "ImageObject",
-      "url": "",
+      "url": "http://localhost:4000",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "",
+    "url": "http://localhost:4000",
     "height": 60,
     "width": 60
   }
@@ -419,6 +419,25 @@ code {
   font-size: 1.125rem;
   line-height: 1.6; }
 
+/*
+Phoolish styles starts here
+*/
+table.book-tracker {
+  border-collapse: separate;
+  border-spacing: 30px; }
+
+table.book-tracker td {
+  vertical-align: centre; }
+
+.read img {
+  position: absolute;
+  width: 200px;
+  clip-path: polygon(0 calc(100% - var(--proportion)), 100% calc(100% - var(--proportion)), 100% 100%, 0 100%); }
+
+.unread img {
+  width: 200px;
+  filter: opacity(15%) saturate(5%); }
+
   </style>
 
 
@@ -435,6 +454,10 @@ code {
     
       
       • <a class="page-link" href="/about/">About</a>
+      
+    
+      
+      • <a class="page-link" href="/book-tracker/">Book Tracker</a>
       
     
       

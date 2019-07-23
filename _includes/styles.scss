@@ -43,3 +43,24 @@ code {
   font-size: 1.125rem;
   line-height: 1.6;
 }
+
+/*
+Phoolish styles starts here
+*/
+table.book-tracker {
+border-collapse: separate;
+border-spacing: 30px;
+}
+table.book-tracker td {vertical-align:centre;}
+
+.read img {
+    position:absolute;
+    width: 200px;
+    clip-path: polygon(0 calc(100% - var(--proportion)), 100% calc(100% - var(--proportion)), 100% 100%, 0 100%);
+}
+
+.unread img{
+    width: 200px;
+    filter: opacity(15%) saturate(5%);
+}
+

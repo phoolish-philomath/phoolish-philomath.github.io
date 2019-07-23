@@ -10,15 +10,15 @@
   <title>Time Machines Are A Code Smell</title>
   <meta name="description" content="I recently read an article called “Mocking is a code smell” that reminded me of a unit test I wrote when I first started writing tests properly. The premise ...">
 
-  <link rel="canonical" href="/time-machines-are-a-code-smell.html">
-  <link rel="alternate" type="application/rss+xml" title="phoolish philomath" href="/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/time-machines-are-a-code-smell.html">
+  <link rel="alternate" type="application/rss+xml" title="phoolish philomath" href="http://localhost:4000/feed.xml">
 
   <script type="application/ld+json">
   
 {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "/time-machines-are-a-code-smell.html",
+  "mainEntityOfPage": "http://localhost:4000/time-machines-are-a-code-smell.html",
   "headline": "Time Machines Are A Code Smell",
   "datePublished": "2019-06-25T00:00:00-04:00",
   "dateModified": "2019-06-25T00:00:00-04:00",
@@ -32,14 +32,14 @@
     "name": "phoolish philomath",
     "logo": {
       "@type": "ImageObject",
-      "url": "",
+      "url": "http://localhost:4000",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "",
+    "url": "http://localhost:4000",
     "height": 60,
     "width": 60
   }
@@ -419,6 +419,25 @@ code {
   font-size: 1.125rem;
   line-height: 1.6; }
 
+/*
+Phoolish styles starts here
+*/
+table.book-tracker {
+  border-collapse: separate;
+  border-spacing: 30px; }
+
+table.book-tracker td {
+  vertical-align: centre; }
+
+.read img {
+  position: absolute;
+  width: 200px;
+  clip-path: polygon(0 calc(100% - var(--proportion)), 100% calc(100% - var(--proportion)), 100% 100%, 0 100%); }
+
+.unread img {
+  width: 200px;
+  filter: opacity(15%) saturate(5%); }
+
   </style>
 
 
@@ -435,6 +454,10 @@ code {
     
       
       • <a class="page-link" href="/about/">About</a>
+      
+    
+      
+      • <a class="page-link" href="/book-tracker/">Book Tracker</a>
       
     
       
