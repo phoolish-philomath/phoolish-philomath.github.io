@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="animal">
+
+  <div class="post-meta">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </div>
+  <div class="book-cover-image" style="text-align:left;">
+	  <img src="/assets/images/{{ page.shorthand }}.jpg" width="20%" style="float:left;">
+  </div>
+  <div class="book-profile" style="float:left;">
+<ul style="list-style-type:none;padding-left:20;">
+	<li><b>Author:</b> {{ page.author }}</li>
+	<li><b>Language:</b> {{ page.language | capitalize }} </li>
+	<li><b>Fiction?:</b> {% if page.fiction %} Yes {% else %} No {% endif %} </li>
+	<li><b>Last Read: </b>  {% assign year = page.last_read_date | date: "%Y" %} {% if year < "1995" %} Not Read Yet {% else %}{{ page.last_read_date | date: "%B %Y" }} {% endif %} </li>
+	<li><b>Reading Progress:</b> {{ page.read_pages }} / {{ page.total_pages }} pages</li>
+</ul>  
+  </div>
+	  <div class="book-notes">
+		  <p> <b>Notes: </b>{{content}} </p>
+  </div>
+</article>
+
+{% include footer.html %}

@@ -1,7 +1,5 @@
 title: phoolish philomath
 paginate:	2 # The number of posts to show per page on your homepage
-baseurl: "/phoolish-philomath.github.io"
-url: "https://www.phoolish-philomath.github.io"
 name: "Phoolish Philomath"
 markdown: kramdown
 mathjax: true
@@ -11,3 +9,6 @@ kramdown:
   parse_block_html: true
 gems:
   - jekyll-paginate
+collections:
+  books:
+    output: true
