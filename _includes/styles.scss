@@ -57,12 +57,10 @@ table.book-tracker td {vertical-align:centre; horizontal-align:centre; border: 1
 
 .read img {
     position:absolute;
-    width: 200px;
     clip-path: polygon(0 calc(100% - var(--proportion)), 100% calc(100% - var(--proportion)), 100% 100%, 0 100%);
 }
 
 .unread img{
-    width: 200px;
     filter: opacity(15%) saturate(5%);
 }
 
