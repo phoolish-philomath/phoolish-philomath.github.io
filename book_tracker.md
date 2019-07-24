@@ -9,13 +9,6 @@ This is a simple webpage I created to start tracking my reading progress as I tr
 {% for book in site.books %}
 {% assign book_count = book_count | plus: 1 %}
 {% endfor %}
-<style>
-a {
-  background-color: transparent;
-  text-decoration: none!important;
-  box-shadow: none;
-}
-</style>
 <table class='book-tracker'>
 {% assign counter = 0 %}
 {% assign sorted_books = site.books | sort: "last_read_date" | reverse %}
@@ -32,8 +25,8 @@ a {
 <img src="/assets/images/{{ book.shorthand }}.jpg"  >
 </div>
 <div class="unread">
-<a alt="{{ book.title }}: {{ read_proportion }}" href="{{site.url}}/books/{{ book.shorthand }}">
-<img border="0" src="/assets/images/{{ book.shorthand }}.jpg" alt="{{ book.title }}: {{ read_proportion }}" >
+<a class="imagelink" href="{{site.url}}/books/{{ book.shorthand }}">
+<img  src="/assets/images/{{ book.shorthand }}.jpg" alt="{{ book.title }}: {{ read_proportion }}" >
 </a>
 </div>
 </div>

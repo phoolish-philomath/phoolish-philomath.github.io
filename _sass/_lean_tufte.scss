@@ -4,6 +4,15 @@
 @charset "UTF-8";
 
 /* Tufte CSS styles */
+.image-link {
+    color: transparent !important;
+    -webkit-text-decoration: none;
+    -webkit-box-shadow: none;
+    -webkit-text-shadow: none;
+    text-decoration: none;
+    box-shadow: none;
+    text-shadow: none;
+}
 html { font-size: 15px; }
 
 body { width: 87.5%;
@@ -112,7 +121,8 @@ figcaption { float: right;
 
 figure.fullwidth figcaption { margin-right: 24%; }
 
-/* Links: replicate underline that clears descenders */
+/* Links: replicate underline that clears descenders 
+*/
 a:link, a:visited { color: inherit; }
 
 a:link { text-decoration: none;

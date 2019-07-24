@@ -20,8 +20,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "http://localhost:4000/book-tracker/",
   "headline": "Book Tracker",
-  "datePublished": "2019-07-23T22:02:39-04:00",
-  "dateModified": "2019-07-23T22:02:39-04:00",
+  "datePublished": "2019-07-24T12:29:54-04:00",
+  "dateModified": "2019-07-24T12:29:54-04:00",
   "description": "",
   "author": {
     "@type": "Person",
@@ -76,6 +76,15 @@
   font-weight: normal;
   font-style: normal; }
 /* Tufte CSS styles */
+.imagelink {
+  color: transparent !important;
+  -webkit-text-decoration: none;
+  -webkit-box-shadow: none;
+  -webkit-text-shadow: none;
+  text-decoration: none;
+  box-shadow: none;
+  text-shadow: none; }
+
 html {
   font-size: 15px; }
 
@@ -208,21 +217,22 @@ figcaption {
 figure.fullwidth figcaption {
   margin-right: 24%; }
 
-/* Links: replicate underline that clears descenders */
+/* Links: replicate underline that clears descenders 
+*/
 a:link, a:visited {
   color: inherit; }
 
-a:link {
-  text-decoration: none;
-  background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
-  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
-  -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
-  background-position: 0% 93%, 100% 93%, 0% 93%; }
-
+/*
+a:link { text-decoration: none;
+         background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
+         background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
+         -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-repeat: no-repeat, no-repeat, repeat-x;
+         text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+         background-position: 0% 93%, 100% 93%, 0% 93%; }
+*/
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   a:link {
     background-position-y: 87%, 87%, 87%; } }
@@ -394,7 +404,7 @@ main {
   margin-top: 20px; }
 
 amp-img {
-  background-color: grey; }
+  background-color: transparent; }
 
 article {
   padding: 2.5rem 0; }
@@ -442,6 +452,15 @@ table.book-tracker td {
   width: 200px;
   filter: opacity(15%) saturate(5%); }
 
+.image-link {
+  color: transparent !important;
+  -webkit-text-decoration: none;
+  -webkit-box-shadow: none;
+  -webkit-text-shadow: none;
+  text-decoration: none;
+  box-shadow: none;
+  text-shadow: none; }
+
   </style>
 
 
@@ -483,14 +502,6 @@ table.book-tracker td {
   <section>
     <p>This is a simple webpage I created to start tracking my reading progress as I try to make my way through the pile of books I am currently reading or intend to read. It also serves the purpose of helping me get a bit better at front-end development.</p>
 
-<style>
-a {
-  background-color: transparent;
-  text-decoration: none!important;
-  box-shadow: none;
-}
-</style>
-
 <table class="book-tracker">
 
 
@@ -507,8 +518,8 @@ a {
 <img src="/assets/images/enigma_of_capital.jpg" />
 </div>
 <div class="unread">
-<a alt="The Enigma of Capital: And the Crises of Capitalism: 19.0" href="http://localhost:4000/books/enigma_of_capital">
-<img border="0" src="/assets/images/enigma_of_capital.jpg" alt="The Enigma of Capital: And the Crises of Capitalism: 19.0" />
+<a class="imagelink" href="http://localhost:4000/books/enigma_of_capital">
+<img src="/assets/images/enigma_of_capital.jpg" alt="The Enigma of Capital: And the Crises of Capitalism: 19.0" />
 </a>
 </div>
 </div>
@@ -526,8 +537,8 @@ a {
 <img src="/assets/images/empires_workshop.jpg" />
 </div>
 <div class="unread">
-<a alt="Empire's Workshop: 20.901639344262296" href="http://localhost:4000/books/empires_workshop">
-<img border="0" src="/assets/images/empires_workshop.jpg" alt="Empire's Workshop: 20.901639344262296" />
+<a class="imagelink" href="http://localhost:4000/books/empires_workshop">
+<img src="/assets/images/empires_workshop.jpg" alt="Empire's Workshop: 20.901639344262296" />
 </a>
 </div>
 </div>
@@ -545,8 +556,8 @@ a {
 <img src="/assets/images/this_changes_everything.jpg" />
 </div>
 <div class="unread">
-<a alt="This Changes Everything: Capitalism vs The Climate: 100.0" href="http://localhost:4000/books/this_changes_everything">
-<img border="0" src="/assets/images/this_changes_everything.jpg" alt="This Changes Everything: Capitalism vs The Climate: 100.0" />
+<a class="imagelink" href="http://localhost:4000/books/this_changes_everything">
+<img src="/assets/images/this_changes_everything.jpg" alt="This Changes Everything: Capitalism vs The Climate: 100.0" />
 </a>
 </div>
 </div>
@@ -568,8 +579,8 @@ a {
 <img src="/assets/images/dirty_wars.jpg" />
 </div>
 <div class="unread">
-<a alt="Dirty Wars: The World Is A Battlefield: 0.7352941176470589" href="http://localhost:4000/books/dirty_wars">
-<img border="0" src="/assets/images/dirty_wars.jpg" alt="Dirty Wars: The World Is A Battlefield: 0.7352941176470589" />
+<a class="imagelink" href="http://localhost:4000/books/dirty_wars">
+<img src="/assets/images/dirty_wars.jpg" alt="Dirty Wars: The World Is A Battlefield: 0.7352941176470589" />
 </a>
 </div>
 </div>
@@ -587,8 +598,8 @@ a {
 <img src="/assets/images/left_hand_of_darkness.jpg" />
 </div>
 <div class="unread">
-<a alt="The Left Hand of Darkness: 3.125" href="http://localhost:4000/books/left_hand_of_darkness">
-<img border="0" src="/assets/images/left_hand_of_darkness.jpg" alt="The Left Hand of Darkness: 3.125" />
+<a class="imagelink" href="http://localhost:4000/books/left_hand_of_darkness">
+<img src="/assets/images/left_hand_of_darkness.jpg" alt="The Left Hand of Darkness: 3.125" />
 </a>
 </div>
 </div>
@@ -606,8 +617,8 @@ a {
 <img src="/assets/images/raja_gidh.jpg" />
 </div>
 <div class="unread">
-<a alt="Raja Gidh: 0.0" href="http://localhost:4000/books/raja_gidh">
-<img border="0" src="/assets/images/raja_gidh.jpg" alt="Raja Gidh: 0.0" />
+<a class="imagelink" href="http://localhost:4000/books/raja_gidh">
+<img src="/assets/images/raja_gidh.jpg" alt="Raja Gidh: 0.0" />
 </a>
 </div>
 </div>
@@ -629,8 +640,8 @@ a {
 <img src="/assets/images/guns_germs_and_steel.jpg" />
 </div>
 <div class="unread">
-<a alt="Guns, Germs and Steel: The Fate of Human Societies: 0.0" href="http://localhost:4000/books/guns_germs_and_steel">
-<img border="0" src="/assets/images/guns_germs_and_steel.jpg" alt="Guns, Germs and Steel: The Fate of Human Societies: 0.0" />
+<a class="imagelink" href="http://localhost:4000/books/guns_germs_and_steel">
+<img src="/assets/images/guns_germs_and_steel.jpg" alt="Guns, Germs and Steel: The Fate of Human Societies: 0.0" />
 </a>
 </div>
 </div>
@@ -648,8 +659,8 @@ a {
 <img src="/assets/images/dispossessed.jpg" />
 </div>
 <div class="unread">
-<a alt="The Dispossessed: 0.0" href="http://localhost:4000/books/dispossessed">
-<img border="0" src="/assets/images/dispossessed.jpg" alt="The Dispossessed: 0.0" />
+<a class="imagelink" href="http://localhost:4000/books/dispossessed">
+<img src="/assets/images/dispossessed.jpg" alt="The Dispossessed: 0.0" />
 </a>
 </div>
 </div>
@@ -667,8 +678,8 @@ a {
 <img src="/assets/images/angarey.jpg" />
 </div>
 <div class="unread">
-<a alt="Angarey: 0.0" href="http://localhost:4000/books/angarey">
-<img border="0" src="/assets/images/angarey.jpg" alt="Angarey: 0.0" />
+<a class="imagelink" href="http://localhost:4000/books/angarey">
+<img src="/assets/images/angarey.jpg" alt="Angarey: 0.0" />
 </a>
 </div>
 </div>

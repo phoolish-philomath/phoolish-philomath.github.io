@@ -10,7 +10,7 @@ main {
 }
 
 amp-img {
-  background-color: grey;
+  background-color: transparent;
 }
 
 article {
@@ -69,4 +69,14 @@ position:relative;
 .unread img{
     width: 200px;
     filter: opacity(15%) saturate(5%);
+}
+
+.image-link {
+    color: transparent !important;
+    -webkit-text-decoration: none;
+    -webkit-box-shadow: none;
+    -webkit-text-shadow: none;
+    text-decoration: none;
+    box-shadow: none;
+    text-shadow: none;
 }

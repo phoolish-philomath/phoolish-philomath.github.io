@@ -20,8 +20,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "http://localhost:4000/page2/",
   "headline": "phoolish philomath",
-  "datePublished": "2019-07-23T22:02:39-04:00",
-  "dateModified": "2019-07-23T22:02:39-04:00",
+  "datePublished": "2019-07-24T12:29:54-04:00",
+  "dateModified": "2019-07-24T12:29:54-04:00",
   "description": "",
   "author": {
     "@type": "Person",
@@ -76,6 +76,15 @@
   font-weight: normal;
   font-style: normal; }
 /* Tufte CSS styles */
+.imagelink {
+  color: transparent !important;
+  -webkit-text-decoration: none;
+  -webkit-box-shadow: none;
+  -webkit-text-shadow: none;
+  text-decoration: none;
+  box-shadow: none;
+  text-shadow: none; }
+
 html {
   font-size: 15px; }
 
@@ -208,21 +217,22 @@ figcaption {
 figure.fullwidth figcaption {
   margin-right: 24%; }
 
-/* Links: replicate underline that clears descenders */
+/* Links: replicate underline that clears descenders 
+*/
 a:link, a:visited {
   color: inherit; }
 
-a:link {
-  text-decoration: none;
-  background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
-  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
-  -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
-  background-position: 0% 93%, 100% 93%, 0% 93%; }
-
+/*
+a:link { text-decoration: none;
+         background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
+         background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
+         -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-repeat: no-repeat, no-repeat, repeat-x;
+         text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+         background-position: 0% 93%, 100% 93%, 0% 93%; }
+*/
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   a:link {
     background-position-y: 87%, 87%, 87%; } }
@@ -394,7 +404,7 @@ main {
   margin-top: 20px; }
 
 amp-img {
-  background-color: grey; }
+  background-color: transparent; }
 
 article {
   padding: 2.5rem 0; }
@@ -441,6 +451,15 @@ table.book-tracker td {
 .unread img {
   width: 200px;
   filter: opacity(15%) saturate(5%); }
+
+.image-link {
+  color: transparent !important;
+  -webkit-text-decoration: none;
+  -webkit-box-shadow: none;
+  -webkit-text-shadow: none;
+  text-decoration: none;
+  box-shadow: none;
+  text-shadow: none; }
 
   </style>
 
