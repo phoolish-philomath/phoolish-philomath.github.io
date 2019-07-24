@@ -7,8 +7,8 @@ fiction: false
 genres:
   - economics
 total_pages: 300
-read_pages: 40
+read_pages: 57
 language: english
-last_read_date: 2019-07-22
+last_read_date: 2019-07-23
 ---
 No notes so far...

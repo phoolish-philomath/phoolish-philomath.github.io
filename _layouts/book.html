@@ -1,26 +1,48 @@
 ---
 layout: default
 ---
+<style>
+.grid-container {
+        display: grid;
+	grid-template-columns: 250px auto;
+	grid-gap: 20px;
+	padding: 5px;
+}
 
+.cover {
+	grid-row-start: 1;
+	grid-row-end: 4;
+}
+.profile {
+	grid-column-start: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+.notes {
+	grid-column-start: 2;
+	grid-row-start: 3;
+	grid row-end: 4;
+}
+</style>
 <article class="animal">
 
   <div class="post-meta">
     <h1 class="post-title">{{ page.title }}</h1>
   </div>
-  <div class="book-cover-image" style="text-align:left;">
-	  <img src="/assets/images/{{ page.shorthand }}.jpg" width="20%" style="float:left;">
-  </div>
-  <div class="book-profile" style="float:left;">
-<ul style="list-style-type:none;padding-left:20;">
-	<li><b>Author:</b> {{ page.author }}</li>
-	<li><b>Language:</b> {{ page.language | capitalize }} </li>
-	<li><b>Fiction?:</b> {% if page.fiction %} Yes {% else %} No {% endif %} </li>
-	<li><b>Last Read: </b>  {% assign year = page.last_read_date | date: "%Y" %} {% if year < "1995" %} Not Read Yet {% else %}{{ page.last_read_date | date: "%B %Y" }} {% endif %} </li>
-	<li><b>Reading Progress:</b> {{ page.read_pages }} / {{ page.total_pages }} pages</li>
-</ul>  
-  </div>
-	  <div class="book-notes">
-		  <p> <b>Notes: </b>{{content}} </p>
+  <div class="grid-container"> 
+	  <div class="cover"><img src="/assets/images/{{ page.shorthand }}.jpg"></div>
+	  <div class="profile">
+          <ul style="list-style-type:none; padding-left:0">
+	     <li><b>Author:</b> {{ page.author }}</li>
+	     <li><b>Language:</b> {{ page.language | capitalize }} </li>
+     	     <li><b>Fiction?:</b> {% if page.fiction %} Yes {% else %} No {% endif %} </li>
+             <li><b>Last Read: </b>  {% assign year = page.last_read_date | date: "%Y" %} {% if year < "1995" %} Not Read Yet {% else %}{{ page.last_read_date | date: "%B %Y" }} {% endif %} </li>
+	     <li><b>Reading Progress:</b> {{ page.read_pages }} / {{ page.total_pages }} pages</li>
+          </ul>  
+	  </div>
+	  <div class="notes">
+	  <p> <b>Notes: </b>{{content}} </p>
+          </div>
   </div>
 </article>
 

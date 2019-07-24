@@ -20,8 +20,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "http://localhost:4000/books/dirty_wars.html",
   "headline": "Dirty Wars: The World Is A Battlefield",
-  "datePublished": "2019-07-23T18:46:34-04:00",
-  "dateModified": "2019-07-23T18:46:34-04:00",
+  "datePublished": "2019-07-23T22:02:39-04:00",
+  "dateModified": "2019-07-23T22:02:39-04:00",
   "description": "No notes so far…",
   "author": {
     "@type": "Person",
@@ -474,26 +474,49 @@ table.book-tracker td {
 </header>
 
 
-    <article class="animal">
+    <style>
+.grid-container {
+        display: grid;
+	grid-template-columns: 250px auto;
+	grid-gap: 20px;
+	padding: 5px;
+}
+
+.cover {
+	grid-row-start: 1;
+	grid-row-end: 4;
+}
+.profile {
+	grid-column-start: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+.notes {
+	grid-column-start: 2;
+	grid-row-start: 3;
+	grid row-end: 4;
+}
+</style>
+<article class="animal">
 
   <div class="post-meta">
     <h1 class="post-title">Dirty Wars: The World Is A Battlefield</h1>
   </div>
-  <div class="book-cover-image" style="text-align:left;">
-	  <img src="/assets/images/dirty_wars.jpg" width="20%" style="float:left;">
-  </div>
-  <div class="book-profile" style="float:left;">
-<ul style="list-style-type:none;padding-left:20;">
-	<li><b>Author:</b> Jeremy Scahill</li>
-	<li><b>Language:</b> English </li>
-	<li><b>Fiction?:</b>  No  </li>
-	<li><b>Last Read: </b>   February 2019  </li>
-	<li><b>Reading Progress:</b> 5 / 680 pages</li>
-</ul>  
-  </div>
-	  <div class="book-notes">
-		  <p> <b>Notes: </b><p>No notes so far…</p>
+  <div class="grid-container"> 
+	  <div class="cover"><img src="/assets/images/dirty_wars.jpg"></div>
+	  <div class="profile">
+          <ul style="list-style-type:none; padding-left:0">
+	     <li><b>Author:</b> Jeremy Scahill</li>
+	     <li><b>Language:</b> English </li>
+     	     <li><b>Fiction?:</b>  No  </li>
+             <li><b>Last Read: </b>   February 2019  </li>
+	     <li><b>Reading Progress:</b> 5 / 680 pages</li>
+          </ul>  
+	  </div>
+	  <div class="notes">
+	  <p> <b>Notes: </b><p>No notes so far…</p>
  </p>
+          </div>
   </div>
 </article>
 
