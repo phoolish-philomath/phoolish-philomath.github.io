@@ -7,8 +7,8 @@ fiction: false
 genres:
   - ancient history
 total_pages: 187
-read_pages: 26
+read_pages: 90
 language: english
-last_read_date: 2019-07-26
+last_read_date: 2019-07-29
 ---
 No notes so far...
