@@ -2,26 +2,30 @@
 layout: default
 ---
 <style>
-.grid-container {
+.book-profile {
         display: grid;
-	grid-template-columns: 250px auto;
-	grid-gap: 20px;
-	padding: 5px;
+	grid-template-columns: 1fr;
+	grid-column-gap: 5px;
+	grid-row-gap: 20px;
+	align-items: left;
 }
 
 .cover {
-	grid-row-start: 1;
-	grid-row-end: 4;
+	// grid-row-start: 1;
+	// grid-row-end: 4;
+	// padding: 10px;
 }
 .profile {
-	grid-column-start: 2;
-	grid-row-start: 1;
-	grid-row-end: 3;
+	// grid-column-start: 2;
+	// grid-row-start: 1;
+	// grid-row-end: 3;
+        
 }
 .notes {
-	grid-column-start: 2;
-	grid-row-start: 3;
-	grid row-end: 4;
+	// grid-column-start: 2;
+	// grid-row-start: 3;
+	// grid row-end: 4;
+	// display: flex;
 }
 </style>
 <article class="animal">
@@ -29,10 +33,10 @@ layout: default
   <div class="post-meta">
     <h1 class="post-title">{{ page.title }}</h1>
   </div>
-  <div class="grid-container"> 
+  <div class="book-profile"> 
 	  <div class="cover"><img src="/assets/images/{{ page.shorthand }}.jpg"></div>
 	  <div class="profile">
-          <ul style="list-style-type:none; padding-left:0">
+          <ul style="list-style-type:none;">
 	     <li><b>Author:</b> {{ page.author }}</li>
 	     <li><b>Language:</b> {{ page.language | capitalize }} </li>
      	     <li><b>Fiction?:</b> {% if page.fiction %} Yes {% else %} No {% endif %} </li>
@@ -40,9 +44,10 @@ layout: default
 	     <li><b>Reading Progress:</b> {{ page.read_pages }} / {{ page.total_pages }} pages</li>
           </ul>  
 	  </div>
-	  <div class="notes">
-	  <p> <b>Notes: </b>{{content}} </p>
-          </div>
+  </div>
+  <div class="notes">
+	  <p> <b>Notes: </b> </p>
+	  <p> {{content}} </p>
   </div>
 </article>
 
