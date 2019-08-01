@@ -20,8 +20,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "http://localhost:4000/books/guns_germs_and_steel.html",
   "headline": "Guns, Germs and Steel: The Fate of Human Societies",
-  "datePublished": "2019-07-25T20:05:38-04:00",
-  "dateModified": "2019-07-25T20:05:38-04:00",
+  "datePublished": "2019-08-01T01:29:57-04:00",
+  "dateModified": "2019-08-01T01:29:57-04:00",
   "description": "No notes so far…",
   "author": {
     "@type": "Person",
@@ -432,27 +432,33 @@ code {
 /*
 Phoolish styles starts here
 */
-table.book-tracker {
-  border-collapse: separate;
-  border-spacing: 30px; }
+.book-tracker-grid,
+.read-grid,
+.unread-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; }
 
-table.book-tracker td {
-  vertical-align: centre; }
+.read-grid,
+.unread-grid {
+  grid-column: 1;
+  grid-row: 1;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 
-.container {
-  width: 200px;
-  position: relative; }
+.unread {
+  z-index: 1; }
 
 .read img {
-  width: 200px;
-  position: absolute;
+  width: 100%;
+  z-index: -1;
   clip-path: polygon(0 calc(100% - var(--proportion)), 100% calc(100% - var(--proportion)), 100% 100%, 0 100%); }
 
 .unread img {
-  width: 200px;
+  width: 100%;
   filter: opacity(15%) saturate(5%); }
 
 .image-link {
+  display: block;
+  height: 100%;
   color: transparent !important;
   -webkit-text-decoration: none;
   -webkit-box-shadow: none;
@@ -494,26 +500,30 @@ table.book-tracker td {
 
 
     <style>
-.grid-container {
+.book-profile {
         display: grid;
-	grid-template-columns: 250px auto;
-	grid-gap: 20px;
-	padding: 5px;
+	grid-template-columns: 1fr;
+	grid-column-gap: 5px;
+	grid-row-gap: 20px;
+	align-items: left;
 }
 
 .cover {
-	grid-row-start: 1;
-	grid-row-end: 4;
+	// grid-row-start: 1;
+	// grid-row-end: 4;
+	// padding: 10px;
 }
 .profile {
-	grid-column-start: 2;
-	grid-row-start: 1;
-	grid-row-end: 3;
+	// grid-column-start: 2;
+	// grid-row-start: 1;
+	// grid-row-end: 3;
+        
 }
 .notes {
-	grid-column-start: 2;
-	grid-row-start: 3;
-	grid row-end: 4;
+	// grid-column-start: 2;
+	// grid-row-start: 3;
+	// grid row-end: 4;
+	// display: flex;
 }
 </style>
 <article class="animal">
@@ -521,10 +531,10 @@ table.book-tracker td {
   <div class="post-meta">
     <h1 class="post-title">Guns, Germs and Steel: The Fate of Human Societies</h1>
   </div>
-  <div class="grid-container"> 
+  <div class="book-profile"> 
 	  <div class="cover"><img src="/assets/images/guns_germs_and_steel.jpg"></div>
 	  <div class="profile">
-          <ul style="list-style-type:none; padding-left:0">
+          <ul style="list-style-type:none;">
 	     <li><b>Author:</b> Jared Diamond</li>
 	     <li><b>Language:</b> English </li>
      	     <li><b>Fiction?:</b>  No  </li>
@@ -532,10 +542,11 @@ table.book-tracker td {
 	     <li><b>Reading Progress:</b> 0 / 444 pages</li>
           </ul>  
 	  </div>
-	  <div class="notes">
-	  <p> <b>Notes: </b><p>No notes so far…</p>
+  </div>
+  <div class="notes">
+	  <p> <b>Notes: </b> </p>
+	  <p> <p>No notes so far…</p>
  </p>
-          </div>
   </div>
 </article>
 

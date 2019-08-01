@@ -20,8 +20,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "http://localhost:4000/book-tracker/",
   "headline": "Book Tracker",
-  "datePublished": "2019-07-25T20:05:38-04:00",
-  "dateModified": "2019-07-25T20:05:38-04:00",
+  "datePublished": "2019-08-01T01:29:57-04:00",
+  "dateModified": "2019-08-01T01:29:57-04:00",
   "description": "",
   "author": {
     "@type": "Person",
@@ -432,27 +432,33 @@ code {
 /*
 Phoolish styles starts here
 */
-table.book-tracker {
-  border-collapse: separate;
-  border-spacing: 30px; }
+.book-tracker-grid,
+.read-grid,
+.unread-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; }
 
-table.book-tracker td {
-  vertical-align: centre; }
+.read-grid,
+.unread-grid {
+  grid-column: 1;
+  grid-row: 1;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 
-.container {
-  width: 200px;
-  position: relative; }
+.unread {
+  z-index: 1; }
 
 .read img {
-  width: 200px;
-  position: absolute;
+  width: 100%;
+  z-index: -1;
   clip-path: polygon(0 calc(100% - var(--proportion)), 100% calc(100% - var(--proportion)), 100% 100%, 0 100%); }
 
 .unread img {
-  width: 200px;
+  width: 100%;
   filter: opacity(15%) saturate(5%); }
 
 .image-link {
+  display: block;
+  height: 100%;
   color: transparent !important;
   -webkit-text-decoration: none;
   -webkit-box-shadow: none;
@@ -500,201 +506,129 @@ table.book-tracker td {
   </div>
 
   <section>
-    <p>This is a simple webpage I created to start tracking my reading progress as I try to make my way through the pile of books I am currently reading or intend to read. It also serves the purpose of helping me get a bit better at front-end development.</p>
+    <p>This is a webpage I created to track my reading progress as I try to make my way through the pile of books I am currently reading or intend to read. For each book cover on this page, the transparent area is proportional to how much of the book is still unread by me. Visualizing my books this way really helps me keep reading every day and (somewhat) encourages me to avoid acquiring yet more new books.</p>
+<div class="book-tracker-grid">
 
-<table class="book-tracker">
+  <div class="read-grid">
 
-
-
-
-
-<tr>
- 
-
-
-<td>
-<div class="container">
-<div class="read" style="--proportion: 40.38461538461539%">
+    <div class="read" style="--proportion: 40.38461538461539%">
+      <p><a class="image-link" href="http://localhost:4000/books/enigma_of_capital">
 <img src="/assets/images/enigma_of_capital.jpg" />
-</div>
-<div class="unread">
-<a class="imagelink" href="http://localhost:4000/books/enigma_of_capital">
-<img src="/assets/images/enigma_of_capital.jpg" alt="The Enigma of Capital: And the Crises of Capitalism: 40.38461538461539" />
-</a>
-</div>
-</div>
-</td>
+</a></p>
+    </div>
 
- 
-
-
- 
-
-
-<td>
-<div class="container">
-<div class="read" style="--proportion: 20.901639344262296%">
+    <div class="read" style="--proportion: 20.901639344262296%">
+      <p><a class="image-link" href="http://localhost:4000/books/empires_workshop">
 <img src="/assets/images/empires_workshop.jpg" />
-</div>
-<div class="unread">
-<a class="imagelink" href="http://localhost:4000/books/empires_workshop">
-<img src="/assets/images/empires_workshop.jpg" alt="Empire's Workshop: 20.901639344262296" />
-</a>
-</div>
-</div>
-</td>
+</a></p>
+    </div>
 
- 
-
-
- 
-
-
-<td>
-<div class="container">
-<div class="read" style="--proportion: 100.0%">
+    <div class="read" style="--proportion: 100.0%">
+      <p><a class="image-link" href="http://localhost:4000/books/this_changes_everything">
 <img src="/assets/images/this_changes_everything.jpg" />
-</div>
-<div class="unread">
-<a class="imagelink" href="http://localhost:4000/books/this_changes_everything">
-<img src="/assets/images/this_changes_everything.jpg" alt="This Changes Everything: Capitalism vs The Climate: 100.0" />
-</a>
-</div>
-</div>
-</td>
+</a></p>
+    </div>
 
-</tr>
-
- 
-
-
-
-<tr>
- 
-
-
-<td>
-<div class="container">
-<div class="read" style="--proportion: 0.7352941176470589%">
+    <div class="read" style="--proportion: 0.7352941176470589%">
+      <p><a class="image-link" href="http://localhost:4000/books/dirty_wars">
 <img src="/assets/images/dirty_wars.jpg" />
-</div>
-<div class="unread">
-<a class="imagelink" href="http://localhost:4000/books/dirty_wars">
-<img src="/assets/images/dirty_wars.jpg" alt="Dirty Wars: The World Is A Battlefield: 0.7352941176470589" />
-</a>
-</div>
-</div>
-</td>
+</a></p>
+    </div>
 
- 
-
-
- 
-
-
-<td>
-<div class="container">
-<div class="read" style="--proportion: 3.125%">
+    <div class="read" style="--proportion: 3.125%">
+      <p><a class="image-link" href="http://localhost:4000/books/left_hand_of_darkness">
 <img src="/assets/images/left_hand_of_darkness.jpg" />
-</div>
-<div class="unread">
-<a class="imagelink" href="http://localhost:4000/books/left_hand_of_darkness">
-<img src="/assets/images/left_hand_of_darkness.jpg" alt="The Left Hand of Darkness: 3.125" />
-</a>
-</div>
-</div>
-</td>
+</a></p>
+    </div>
 
- 
-
-
- 
-
-
-<td>
-<div class="container">
-<div class="read" style="--proportion: 0.0%">
+    <div class="read" style="--proportion: 0.0%">
+      <p><a class="image-link" href="http://localhost:4000/books/raja_gidh">
 <img src="/assets/images/raja_gidh.jpg" />
-</div>
-<div class="unread">
-<a class="imagelink" href="http://localhost:4000/books/raja_gidh">
-<img src="/assets/images/raja_gidh.jpg" alt="Raja Gidh: 0.0" />
-</a>
-</div>
-</div>
-</td>
+</a></p>
+    </div>
 
-</tr>
-
- 
-
-
-
-<tr>
- 
-
-
-<td>
-<div class="container">
-<div class="read" style="--proportion: 0.0%">
+    <div class="read" style="--proportion: 0.0%">
+      <p><a class="image-link" href="http://localhost:4000/books/guns_germs_and_steel">
 <img src="/assets/images/guns_germs_and_steel.jpg" />
-</div>
-<div class="unread">
-<a class="imagelink" href="http://localhost:4000/books/guns_germs_and_steel">
-<img src="/assets/images/guns_germs_and_steel.jpg" alt="Guns, Germs and Steel: The Fate of Human Societies: 0.0" />
-</a>
-</div>
-</div>
-</td>
+</a></p>
+    </div>
 
- 
-
-
- 
-
-
-<td>
-<div class="container">
-<div class="read" style="--proportion: 0.0%">
+    <div class="read" style="--proportion: 0.0%">
+      <p><a class="image-link" href="http://localhost:4000/books/dispossessed">
 <img src="/assets/images/dispossessed.jpg" />
-</div>
-<div class="unread">
-<a class="imagelink" href="http://localhost:4000/books/dispossessed">
-<img src="/assets/images/dispossessed.jpg" alt="The Dispossessed: 0.0" />
-</a>
-</div>
-</div>
-</td>
+</a></p>
+    </div>
 
- 
-
-
- 
-
-
-<td>
-<div class="container">
-<div class="read" style="--proportion: 0.0%">
+    <div class="read" style="--proportion: 0.0%">
+      <p><a class="image-link" href="http://localhost:4000/books/angarey">
 <img src="/assets/images/angarey.jpg" />
+</a></p>
+    </div>
+
+  </div>
+
+  <div class="unread-grid">
+
+    <div class="unread">
+      <p><a class="image-link" href="http://localhost:4000/books/enigma_of_capital">
+<img src="/assets/images/enigma_of_capital.jpg" alt="The Enigma of Capital: And the Crises of Capitalism" />
+</a></p>
+    </div>
+
+    <div class="unread">
+      <p><a class="image-link" href="http://localhost:4000/books/empires_workshop">
+<img src="/assets/images/empires_workshop.jpg" alt="Empire's Workshop" />
+</a></p>
+    </div>
+
+    <div class="unread">
+      <p><a class="image-link" href="http://localhost:4000/books/this_changes_everything">
+<img src="/assets/images/this_changes_everything.jpg" alt="This Changes Everything: Capitalism vs The Climate" />
+</a></p>
+    </div>
+
+    <div class="unread">
+      <p><a class="image-link" href="http://localhost:4000/books/dirty_wars">
+<img src="/assets/images/dirty_wars.jpg" alt="Dirty Wars: The World Is A Battlefield" />
+</a></p>
+    </div>
+
+    <div class="unread">
+      <p><a class="image-link" href="http://localhost:4000/books/left_hand_of_darkness">
+<img src="/assets/images/left_hand_of_darkness.jpg" alt="The Left Hand of Darkness" />
+</a></p>
+    </div>
+
+    <div class="unread">
+      <p><a class="image-link" href="http://localhost:4000/books/raja_gidh">
+<img src="/assets/images/raja_gidh.jpg" alt="Raja Gidh" />
+</a></p>
+    </div>
+
+    <div class="unread">
+      <p><a class="image-link" href="http://localhost:4000/books/guns_germs_and_steel">
+<img src="/assets/images/guns_germs_and_steel.jpg" alt="Guns, Germs and Steel: The Fate of Human Societies" />
+</a></p>
+    </div>
+
+    <div class="unread">
+      <p><a class="image-link" href="http://localhost:4000/books/dispossessed">
+<img src="/assets/images/dispossessed.jpg" alt="The Dispossessed" />
+</a></p>
+    </div>
+
+    <div class="unread">
+      <p><a class="image-link" href="http://localhost:4000/books/angarey">
+<img src="/assets/images/angarey.jpg" alt="Angarey" />
+</a></p>
+    </div>
+
+  </div>
+
 </div>
-<div class="unread">
-<a class="imagelink" href="http://localhost:4000/books/angarey">
-<img src="/assets/images/angarey.jpg" alt="Angarey: 0.0" />
-</a>
-</div>
-</div>
-</td>
 
-</tr>
-
- 
-
-</table>
-
-<h3 id="notes"><strong>Notes</strong></h3>
-<p>For each book cover on this page, the transparent area is proportional to how much of the book is still unread.</p>
-
-<p>You can click on a book cover to be taken to a profile page dedicated to that book with more details and notes.</p>
+<h3 id="developer-notes"><strong>Developer Notes</strong></h3>
+<p>The layout above has been created using CSS Grid.</p>
 
   </section>
 
