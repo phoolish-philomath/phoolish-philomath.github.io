@@ -4,7 +4,7 @@ title: "A Real-Time A-Hole Leaderboard"
 tags: [python, flask, leaderboard, personal project, javascript, websockets, reddit, software development, software design, cs]
 ---
 
-I built a real-time leaderboard displaying the worst of the worst right now on [/r/AmITheAsshole](https://www.reddit.com/r/AmItheAsshole/).
+I built a [real-time leaderboard](https://github.com/phoolish-philomath/reddit-aita-leaderboard) displaying the worst of the worst right now on [/r/AmITheAsshole](https://www.reddit.com/r/AmItheAsshole/).
 
 <!--more-->
 
