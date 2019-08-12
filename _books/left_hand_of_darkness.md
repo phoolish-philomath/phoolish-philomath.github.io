@@ -6,9 +6,9 @@ author: Ursula K. Le Guin
 fiction: true
 genres:
   - science fiction
-total_pages: 320
-read_pages: 10
+total_pages: 323
+read_pages: 44
 language: english
-last_read_date: 2019-01-30
+last_read_date: 2019-08-12
 ---
 No notes so far...
