@@ -7,8 +7,8 @@ fiction: true
 genres:
   - science fiction
 total_pages: 387
-read_pages: 0 
+read_pages: 2 
 language: english
-last_read_date: 1099-09-09
+last_read_date: 2019-09-02
 ---
 No notes so far...
