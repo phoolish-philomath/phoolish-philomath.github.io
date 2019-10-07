@@ -7,8 +7,8 @@ fiction: false
 genres:
   - indigenous people of north america
 total_pages: 266
-read_pages: 52
+read_pages: 266
 language: english
-last_read_date: 2019-09-10
+last_read_date: 2019-09-22
 ---
 No notes so far...
