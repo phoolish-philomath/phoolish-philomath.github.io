@@ -1,5 +1,5 @@
 title: phoolish philomath
-paginate:	2 # The number of posts to show per page on your homepage
+paginate:	4 # The number of posts to show per page on your homepage
 name: "Phoolish Philomath"
 markdown: kramdown
 mathjax: true
